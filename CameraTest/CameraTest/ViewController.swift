@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     // MARK: Outlets
-    @IBOutlet weak var catureView: UIView!
+    @IBOutlet weak var captureView: UIView!
     @IBOutlet weak var photoModeButton: UIButton!
     @IBOutlet weak var videoModeButton: UIButton!
     @IBOutlet weak var toggleFlashButton: UIButton!
@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var captureButton: UIButton!
     
     // MARK: Variables
+    
+    let cameraController = CameraController()
     
     // Hide status bar
     override var prefersStatusBarHidden: Bool { return true }
@@ -31,6 +33,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupCaptureButton()
+        configureCameraController()
         
     }
 
@@ -48,6 +51,16 @@ class ViewController: UIViewController {
     }
     
 
+    // Configure the preview
+    func configureCameraController() {
+        cameraController.prepare {(error) in
+            if let error = error {
+                print(error)
+            }
+            
+            try? self.cameraController.displayPreview(on: self.captureView)
+        }
+    }
     
 
 

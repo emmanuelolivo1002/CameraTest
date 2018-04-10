@@ -93,7 +93,7 @@
                     </view>
                     <connections>
                         <outlet property="captureButton" destination="8W7-TI-N9H" id="oW0-1c-Tkt"/>
-                        <outlet property="catureView" destination="Dig-eg-gdK" id="0lg-uN-E51"/>
+                        <outlet property="captureView" destination="Dig-eg-gdK" id="8HE-FY-FcW"/>
                         <outlet property="photoModeButton" destination="hi8-qp-fDo" id="cqY-w9-9Md"/>
                         <outlet property="toggleCameraButton" destination="zG1-1x-v6X" id="h0n-Zw-mUe"/>
                         <outlet property="toggleFlashButton" destination="Ppm-Yd-JVl" id="pQN-4H-O3T"/>

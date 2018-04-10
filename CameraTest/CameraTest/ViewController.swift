@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     // MARK: Variables
     
+    // Instance of camera controller
     let cameraController = CameraController()
     
     // Hide status bar
@@ -27,6 +28,38 @@ class ViewController: UIViewController {
 
     
     // MARK: Actions
+    @IBAction func toggleCameraButtonPressed(_ sender: Any) {
+        do {
+            try cameraController.switchCameras()
+        }
+            
+        catch {
+            print(error)
+        }
+        
+        switch cameraController.currentCameraPosition {
+        case .some(.front):
+            toggleCameraButton.setImage(#imageLiteral(resourceName: "ic_camera_front"), for: .normal)
+            
+        case .some(.rear):
+            toggleCameraButton.setImage(#imageLiteral(resourceName: "ic_camera_rear"), for: .normal)
+            
+        case .none:
+            return
+        }
+    }
+    
+    @IBAction func toggleFlashButtonPressed(_ sender: Any) {
+        if cameraController.flashMode == .on {
+            cameraController.flashMode = .off
+            toggleFlashButton.setImage(#imageLiteral(resourceName: "ic_flash_off"), for: .normal)
+        }
+            
+        else {
+            cameraController.flashMode = .on
+            toggleFlashButton.setImage(#imageLiteral(resourceName: "ic_flash_on"), for: .normal)
+        }
+    }
     
     // MARK: Functions
     override func viewDidLoad() {

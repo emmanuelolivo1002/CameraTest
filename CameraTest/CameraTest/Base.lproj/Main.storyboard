@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,101 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CameraTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dig-eg-gdK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8W7-TI-N9H">
+                                        <rect key="frame" x="157" y="577" width="60" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Bbg-AR-Ebp"/>
+                                            <constraint firstAttribute="width" constant="60" id="FLV-9u-UA7"/>
+                                        </constraints>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-Yd-JVl">
+                                        <rect key="frame" x="335" y="44" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="A1b-fV-Dhx"/>
+                                            <constraint firstAttribute="width" constant="24" id="zqy-GY-ovD"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="ic_flash_off"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG1-1x-v6X">
+                                        <rect key="frame" x="335" y="84" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="CbQ-0D-MUY"/>
+                                            <constraint firstAttribute="height" constant="24" id="o4t-jf-n1C"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="ic_camera_rear"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi8-qp-fDo">
+                                        <rect key="frame" x="24" y="579" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="bhh-D5-Q6T"/>
+                                            <constraint firstAttribute="width" constant="24" id="hBE-El-CEB"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="ic_photo_camera"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqt-T5-JHW">
+                                        <rect key="frame" x="24" y="619" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="3sq-yv-NSX"/>
+                                            <constraint firstAttribute="height" constant="24" id="LoV-h7-B8y"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="ic_videocam"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ppm-Yd-JVl" firstAttribute="top" secondItem="Dig-eg-gdK" secondAttribute="topMargin" constant="16" id="3lT-Jw-Tfd"/>
+                                    <constraint firstItem="hi8-qp-fDo" firstAttribute="leading" secondItem="Dig-eg-gdK" secondAttribute="leadingMargin" constant="16" id="9ie-ah-KIp"/>
+                                    <constraint firstItem="gqt-T5-JHW" firstAttribute="leading" secondItem="Dig-eg-gdK" secondAttribute="leadingMargin" constant="16" id="H5A-yw-Y5f"/>
+                                    <constraint firstAttribute="trailing" secondItem="zG1-1x-v6X" secondAttribute="trailing" constant="16" id="LH8-J4-yvp"/>
+                                    <constraint firstAttribute="bottom" secondItem="8W7-TI-N9H" secondAttribute="bottom" constant="30" id="TeY-ZE-vWc"/>
+                                    <constraint firstItem="zG1-1x-v6X" firstAttribute="top" secondItem="Ppm-Yd-JVl" secondAttribute="bottom" constant="16" id="bOl-dZ-iQn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ppm-Yd-JVl" secondAttribute="trailing" constant="16" id="h5I-Y5-i0i"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="gqt-T5-JHW" secondAttribute="bottom" constant="16" id="l33-s4-s6z"/>
+                                    <constraint firstItem="gqt-T5-JHW" firstAttribute="top" secondItem="hi8-qp-fDo" secondAttribute="bottom" constant="16" id="mmN-5A-w8T"/>
+                                    <constraint firstItem="8W7-TI-N9H" firstAttribute="centerX" secondItem="Dig-eg-gdK" secondAttribute="centerX" id="qub-PL-6dO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dig-eg-gdK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Di1-ve-r8Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dig-eg-gdK" secondAttribute="bottom" id="Ors-Bb-Lub"/>
+                            <constraint firstItem="Dig-eg-gdK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QOk-3t-Cul"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dig-eg-gdK" secondAttribute="trailing" id="gXU-Ec-sKL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="captureButton" destination="8W7-TI-N9H" id="oW0-1c-Tkt"/>
+                        <outlet property="catureView" destination="Dig-eg-gdK" id="0lg-uN-E51"/>
+                        <outlet property="photoModeButton" destination="hi8-qp-fDo" id="cqY-w9-9Md"/>
+                        <outlet property="toggleCameraButton" destination="zG1-1x-v6X" id="h0n-Zw-mUe"/>
+                        <outlet property="toggleFlashButton" destination="Ppm-Yd-JVl" id="pQN-4H-O3T"/>
+                        <outlet property="videoModeButton" destination="gqt-T5-JHW" id="4KW-Z9-eqL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_camera_rear" width="24" height="24"/>
+        <image name="ic_flash_off" width="24" height="24"/>
+        <image name="ic_photo_camera" width="24" height="24"/>
+        <image name="ic_videocam" width="24" height="24"/>
+    </resources>
 </document>
